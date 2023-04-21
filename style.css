@@ -21,9 +21,11 @@
 }
 
 @media (max-width:768px) {
+
   .header {
     text-align: center;
   }
+
 }
 
 .main {
@@ -35,7 +37,7 @@
 .task {
   width: 56%;
   display: inline-block;
-  flex-grow: 1
+  flex-grow: 1;
 }
 
 .new-item-wrapper {
@@ -48,7 +50,7 @@
 }
 
 .list-item,
-.title  {
+.title {
   list-style: none;
 }
 
@@ -137,7 +139,7 @@
 }
 
 .list-item>.task-input {
-  width: 226px
+  width: 226px;
 }
 
 .button-delete-img {
@@ -158,12 +160,12 @@
 
 /* Edit Task */
 .todo-list .list-item .task-input {
-  display: none
+  display: none;
 }
 
 .todo-list .list-item.editMode .task-input {
   display: inline-block;
-  width: 224px
+  width: 224px;
 }
 
 .todo-list .list-item.editMode .task-title {
