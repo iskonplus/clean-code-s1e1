@@ -8,10 +8,10 @@
 
 // Event handling, user interaction is what starts the code execution.
 
-var taskInput=document.querySelector(".new-item.task");//Add a new task.
+var taskInput=document.querySelector(".new__item.task");//Add a new task.
 var addButton=document.querySelectorAll(".button")[0];//first button
-var incompleteTaskHolder=document.querySelector(".todo-list");//ul of #incompleteTasks
-var completedTasksHolder=document.querySelector(".todo-list.completed");//completed-tasks
+var incompleteTaskHolder=document.querySelector(".todo__list");//ul of #incompleteTasks
+var completedTasksHolder=document.querySelector(".todo__list.completed");//completed-tasks
 
 
 //New task list item
@@ -34,12 +34,12 @@ var createNewTaskElement=function(taskString){
     var deleteButtonImg=document.createElement("img");//delete button image
 
     label.innerText=taskString;
-    label.className='task-title task';
+    label.className='task__title task';
 
     //Each elements, needs appending
     checkBox.type = "checkbox";
     editInput.type="text";
-    editInput.className="task-input task";
+    editInput.className="task__input task";
 
     editButton.innerText="Edit"; //innerText encodes special characters, HTML does not.
     editButton.className="edit button";
@@ -52,7 +52,7 @@ var createNewTaskElement=function(taskString){
 
 
     //and appending.
-    listItem.className="list-item";
+    listItem.className="list__item";
     listItem.appendChild(checkBox);
     listItem.appendChild(label);
     listItem.appendChild(editInput);
@@ -86,8 +86,8 @@ var editTask=function(){
 
     var listItem=this.parentNode;
 
-    var editInput=listItem.querySelector('.task-input.task');
-    var label=listItem.querySelector(".task-title");
+    var editInput=listItem.querySelector('.task__input.task');
+    var label=listItem.querySelector(".task__title");
     var editBtn=listItem.querySelector(".edit");
     var containsClass=listItem.classList.contains("editMode");
     //If class of the parent is .editmode
